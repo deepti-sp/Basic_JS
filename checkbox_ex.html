@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h2>Select the courses</h2><br>
+		FS:<input type="checkbox"  value="FS" id="myCheck2" /><br>
+		ML:<input type="checkbox"  value="ML" id="myCheck3" /><br>
+		BDA:<input type="checkbox"  value="BDA" id="myCheck4" /><br>
+		<button onclick="checkCheckbox()">Display the details</button><br>
+		<h4 style="color:green" id="result"></h3>   
+		<h4 style="color:red" id="error"></h3> 
+		<script>
+        function checkCheckbox() {  
+			var a = document.getElementById("myCheck2");  
+			var b = document.getElementById("myCheck3");  
+			var c = document.getElementById("myCheck4");  
+			if (a.checked == true && b.checked == true && c.checked == true){  
+				return document.getElementById("result").innerHTML = "All COURSES ARE SELECTED";  
+			}  
+			  
+			else if (a.checked == true){  
+				var a = document.getElementById("myCheck2").value;  
+				return document.getElementById("result").innerHTML = a;   
+			}   
+			else if (b.checked == true){  
+				var b = document.getElementById("myCheck3").value;  
+				return document.getElementById("result").innerHTML = b;  
+			}  
+			else if (c.checked == true){  
+				var c = document.getElementById("myCheck4").value;  
+				return document.getElementById("result").innerHTML = c;
+			}  
+			else {  
+				return document.getElementById("error").innerHTML = "*Please select a course";  
+			}  
+		}  
+        </script>
+	</body>
+</html>
